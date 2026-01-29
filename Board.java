@@ -16,11 +16,17 @@ public class Board {
 
     public static void display() {
         System.out.println("cargando tablero...");
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                System.out.print(tablero[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void placeShip(int x, int y, int length, boolean horizontal) {
         System.out.println("colocando barco en el tablero...");
-        
+
         if (horizontal) {
             for (int i = 0; i < length; i++) {
                 tablero[x][y + i] = SHIP;
